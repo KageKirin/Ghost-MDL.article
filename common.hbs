@@ -61,6 +61,12 @@
 
 		<!-- bonus feature: MathML support -->
 		<script src='//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+
+		<!-- bonus feature: LaTeX support -->
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.3.0/katex.min.css">
+		<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.3.0/katex.min.js"></script>
+		{{!-- <script src="{{asset "js/katex/auto-render.min.js"}}"></script> <!-- host locally --> --}}
+
 		{{ghost_head}}
 	</head>
 	<body>
@@ -97,6 +103,16 @@
 				</footer>
 			</main>
 		</div>
+		{{!-- <script>
+    		renderMathInElement(document.getElementById("katex"), {
+             	delimiters: [
+					{left: "$$", right: "$$", display: true},
+					{left: "\\[", right: "\\]", display: true},
+					{left: "$", right: "$", display: false},
+					{left: "\\(", right: "\\)", display: false}
+             	]
+          	});
+  		</script> --}}
 		{{ghost_foot}}
 		<a href="https://github.com/google/material-design-lite/blob/master/templates/article/" target="_blank" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">View Source</a>
 		<script src="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js"></script>
