@@ -8,5 +8,15 @@
 		&gt; {{title}}
 	</div>
 	{{content}}
+	<hr />
+	<nav class="navigation" role="navigation">
+		{{#next_post}}
+			<a href="{{url}}">&larr; {{title}}</a>
+		{{/next_post}}
+
+		{{#prev_post}}
+			<a href="{{url}}">{{title}} &rarr;</a>
+		{{/prev_post}}
+	</nav>
 </div>
 {{/post}}
