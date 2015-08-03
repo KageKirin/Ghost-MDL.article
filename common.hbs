@@ -49,7 +49,21 @@
 
 		<style>
 			.demo-ribbon {
-				background-image: url('{{@blog.cover}}');
+				{{#is "author"}}
+					{{#if author.cover}}
+						background-image: url('{{author.cover}}');
+					{{/if}}
+				{{else}}
+					{{#is "tag"}}
+						background-image: url('{{tag.image}}');
+					{{else}}
+						{{#is "post, page"}}
+								background-image: url('{{post.image}}');
+						{{else}}
+							background-image: url('{{@blog.cover}}');
+						{{/is}}
+					{{/is}}
+				{{/is}}
 			}
 		</style>
 
