@@ -14,6 +14,15 @@
 	</div>
 	<h3>Index</h3>
 		{{#foreach posts}}
-			<p><a href="{{url}}">{{title}}</a></p>
+			<p><a href="{{url}}">{{title}}</a>
+				written {{date published_at timeago="true"}}
+				by {{author}}
+				{{#if tags}}
+					in
+					{{#foreach tags}}
+						<a href="{{url}}" title="{{name}}" class="tag-{{slug}}">#{{name}}</a>
+					{{/foreach}}
+				{{/if}}
+			</p>
 		{{/foreach}}
 </div>
