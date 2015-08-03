@@ -1,14 +1,12 @@
 {{!< common}}
 
 {{#post}}
-
 <div class="demo-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
 	<div class="demo-crumbs mdl-color-text--grey-500">
-		{{@blog.title}} 
+		{{@blog.title}}
 		{{tags prefix="&gt; " separator=", " autolink="false"}}
 		&gt; {{title}}
 	</div>
 	{{content}}
 </div>
-
 {{/post}}
